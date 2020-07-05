@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+requests
+mongoengine
+kombu
+pydantic

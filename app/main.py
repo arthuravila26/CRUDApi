@@ -1,5 +1,3 @@
-import json
-
 from fastapi import FastAPI
 
 from app.models.person import Person
