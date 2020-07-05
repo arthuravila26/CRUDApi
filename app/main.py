@@ -2,11 +2,12 @@ import json
 
 from fastapi import FastAPI
 
-from app.db.register import Register
+from app.models.person import Person
+from app.services.person_service import PersonService
 
 app = FastAPI()
 
-@app.post('/new')
-def new_person(person):
-    people = Register.objects.post(person=person)
-    return json.loads(people)
+
+@app.post('/new', status_code=201)
+def new_person(person: Person):
+    return PersonService().create_person(person)

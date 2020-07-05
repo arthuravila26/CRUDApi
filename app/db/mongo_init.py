@@ -1,4 +1,5 @@
 import mongoengine
+
 from app.utils.logger import logger
 from app.db.mongo_configs import MongoConfigs
 
